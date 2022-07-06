@@ -1,0 +1,72 @@
+# {{=<% %>=}}
+---
+apiVersion: templates.krateo.io/v1alpha1
+kind: AwsStack
+metadata:
+  name: <% deploymentId %>-awsstack
+  labels:
+    deploymentId: <% deploymentId %>
+spec:
+  dashboard:
+    description: <% description %>
+    icon: "fa-brands fa-aws"
+    tags:
+      - aws
+      - stack
+      - infrastructure
+      - rds
+    links:
+      - url: https://<% provider %>/<% organizationName %>/<% repositoryName %>
+        title: <% organizationName %>/<% repositoryName %>
+        icon: "fa-brands fa-git"
+      - url: https://kiratech.awsapps.com/start#/
+        title: AWS Console
+        icon: "fa-brands fa-aws"
+    plugins:
+      - name: resources
+        value: <% deploymentId %>-awsstack
+        type: argocd
+        icon: fa-solid fa-cookie
+        endpointName: argocd
+      - name: documentation
+        values:
+          - README.md
+        type: doc
+        icon: fa-solid fa-book-skull
+        endpointName: github.com
+      - name: kubernetes
+        value: "deploymentId=<% deploymentId %>"
+        type: kubernetes
+        icon: fa-brands fa-docker
+    owner: <% owner %>
+  namespace: <% namespace %>
+  eks:
+    clusterName: <% clusterName %>
+  nodeGroup:
+    scalingConfig:
+      minSize: <% clusterNodes %>
+      maxSize: <% maxClusterNodes %>
+      desiredSize: <% clusterNodes %>
+  network:
+    networkName: <% networkName %>
+  rds:
+    name: <% rdsName %>
+    region: <% rdsRegion %>
+    allocatedStorage: <% rdsDataDiskSizeGb %>
+    dbInstanceClass: <% rdsInstanceClass %>
+    engineVersion: "<% rdsEngineVersion %>"
+    storageType: <% rdsStorageType %>
+  fromRepo:
+    domain: github.com
+    provider: github
+    apiUrl: https://api.github.com/
+    repositoryName: krateo-template-awsstack
+    organizationName: krateoplatformops
+    schema: https
+  toRepo:
+    domain: <% domain %>
+    provider: <% provider %>
+    apiUrl: <% apiUrl %>
+    repositoryName: <% repositoryName %>
+    organizationName: <% organizationName %>
+    schema: <% schema %> #it's the protocol for the url
