@@ -695,6 +695,9 @@ spec:
     - base:
         apiVersion: github.krateo.io/v1alpha1
         kind: Repo
+        spec:
+          forProvider:
+            initialize: true
       patches:
         - fromFieldPath: "metadata.labels[deploymentId]"
           toFieldPath: "spec.forProvider.deploymentId"
