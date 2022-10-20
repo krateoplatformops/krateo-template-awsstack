@@ -1,4 +1,6 @@
 ## Krateo Template AWS-Stack
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkrateoplatformops%2Fkrateo-template-awsstack.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkrateoplatformops%2Fkrateo-template-awsstack?ref=badge_shield)
+
 This is a template used to deploy a fully functional EKS cluster through crossplane AWS provider.
 
 ### Prerequisites: ###
@@ -12,3 +14,6 @@ This is a template used to deploy a fully functional EKS cluster through crosspl
 2)      kubectl apply -f defaults/test_claim.yaml
 
 - Option 2: install it using the Krateo Dashboard that will populate and apply defaults/claim.yaml
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkrateoplatformops%2Fkrateo-template-awsstack.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkrateoplatformops%2Fkrateo-template-awsstack?ref=badge_large)
