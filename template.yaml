@@ -67,7 +67,7 @@ spec:
           required: true
           default: db.t3.micro
           type: radio
-          values:
+          options:
             - title: db.t3.micro
               value: db.t3.micro
               description: 1 core\n2 vCPU\n1 GB of memory
@@ -104,7 +104,7 @@ spec:
           required: true
           default: standard
           type: radio
-          values:
+          options:
             - title: standard
               value: standard
             - title: gp2
