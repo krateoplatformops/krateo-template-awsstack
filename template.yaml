@@ -2,53 +2,51 @@ apiVersion: krateo.io/v1alpha1
 kind: Template
 metadata:
   name: aws-stack-template
-  annotations:
-    title: AWS Stack template
-    description: Krateo Template Sample aws stack
-    icon: fa-brands fa-aws
-    owner: mauro.sala@kiratech.it
-  labels:
-    tags:
-      - aws
-      - eks
-      - rds
-      - stack
 spec:
+  owner: mauro.sala@kiratech.it
+  title: AWS Stack template
+  description: Krateo Template Sample aws stack
+  icon: fa-brands fa-aws
+  tags:
+    - aws
+    - eks
+    - rds
+    - stack
   widgets:
     - title: Name and description
       description: Name and description of the stack.
       properties:
-        name:
-          title: Name
+        - title: Name
           description: The name of the component
           required: true
-        description:
-          title: Description
+          key: name
+        - title: Description
+          key: description
           description: Help others understand what this deployment does.
           required: true
-        namespace:
-          title: Krateo namespace
+        - title: Namespace
+          key: namespace
           description: Krateo namespace for the stack.
           required: true
     - title: Kubernetes
       box: Kubernetes cluster name and network name.
       boxStyle: info
       properties:
-        clusterName:
+        - key: clusterName
           title: Cluster Name
           description: The name of the cluster
           required: true
-        networkName:
+        - key: networkName
           title: Network name
           description: The VPC network to use
           required: true
-        clusterNodes:
+        - key: clusterNodes
           title: Cluster Nodes
           description: The number of nodes in the cluster
           required: true
           type: number
           default: 3
-        maxClusterNodes:
+        - key: maxClusterNodes
           title: Max Cluster Nodes
           description: The maximum number of nodes in the cluster
           required: true
@@ -59,11 +57,11 @@ spec:
       box: Please specify the database name, region, storage type, instance class and engine version.
       boxStyle: warning
       properties:
-        rdsName:
+        - key: rdsName
           title: Rds Name
           description: The name of the RDS
           required: true
-        rdsInstanceClass:
+        - key: rdsInstanceClass
           title: Rds Instance Class
           description: The instance class of the RDS
           required: true
@@ -79,28 +77,28 @@ spec:
             - title: db.t3.large
               value: db.t3.large
               description: 2 core\n2 vCPU\n8 GB of memory
-        rdsEngine:
+        - key: rdsEngine
           title: Rds Engine
           description: The engine of the RDS
           required: true
           default: postgres
-        rdsEngineVersion:
+        - key: rdsEngineVersion
           title: Rds Engine Version
           description: The engine version of the RDS
           required: true
           default: 13.4
-        rdsDataDiskSizeGb:
+        - key: rdsDataDiskSizeGb
           title: Rds Disk Size
           description: The size of the RDS disk
           required: true
           default: 10
           type: number
-        rdsRegion:
+        - key: rdsRegion
           title: Rds Region
           description: The region of the RDS
           required: true
           default: eu-central-1
-        rdsStorageType:
+        - key: rdsStorageType
           title: Rds Storage Type
           description: The storage type of the RDS
           required: true
@@ -113,18 +111,17 @@ spec:
     - title: Git repository destination
       box: Set the destination repository.
       properties:
-        provider:
-          title: Git Provider
+        - title: Endpoint
+          key: provider
+          description: github.com / gitlab.com / bitbucket.org
           required: true
-          default: github.com
-          values:
-            - github.com
-        organizationName:
+          type: endpoint
+        - key: organizationName
           title: Repository Organization
           required: true
           description: Organization name
           default: krateoplatformops
-        repositoryName:
+        - key: repositoryName
           title: Repository Name
           required: true
           description: The name of the repository
