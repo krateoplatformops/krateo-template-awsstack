@@ -4,8 +4,8 @@ metadata:
   name: aws-stack-template
 spec:
   owner: mauro.sala@kiratech.it
-  title: AWS Stack template
-  description: Krateo Template Sample aws stack
+  title: AWS Stack
+  description: Krateo Template AWS stack
   icon: fa-brands fa-aws
   tags:
     - aws
