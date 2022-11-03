@@ -5,7 +5,7 @@ metadata:
 spec:
   owner: mauro.sala@kiratech.it
   title: AWS Stack
-  description: Krateo Template AWS stack
+  description: Krateo AWS stack Template
   icon: fa-brands fa-aws
   tags:
     - aws
