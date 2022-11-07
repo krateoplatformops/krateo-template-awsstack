@@ -73,6 +73,10 @@ spec:
                       type: string
                     repositoryName:
                       type: string
+                    description:
+                      type: string
+                    destinationApiUrl:
+                      type: string
                     eks:
                       type: object
                       properties:

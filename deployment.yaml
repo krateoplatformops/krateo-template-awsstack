@@ -41,7 +41,6 @@ spec:
     organizationName: <% organizationName %>
     repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
     destinationApiUrl: <% destinationEndpoint.target %>
-    host: <% host %>
     description: Cause baby, you're a firework. Come on, show 'em what you're worth
     endpointName: <% destinationEndpoint.friendlyName %>
     namespace: <% namespace %>
