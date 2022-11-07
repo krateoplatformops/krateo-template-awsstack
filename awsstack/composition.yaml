@@ -725,7 +725,7 @@ spec:
           transforms:
             - type: string
               string:
-                fmt: "%s-fireworksapp-values"
+                fmt: "%s-awsstack-values"
         - fromFieldPath: metadata.name
           toFieldPath: spec.providerConfigRef.name
           transforms:
@@ -765,6 +765,6 @@ spec:
           transforms:
             - type: string
               string:
-                fmt: "%s-fireworksapp-cm"
-        - fromFieldPath: spec.namespace
+                fmt: "%s-awsstack-cm"
+        - fromFieldPath: spec.values.namespace
           toFieldPath: spec.forProvider.manifest.metadata.namespace
