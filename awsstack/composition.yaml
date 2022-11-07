@@ -17,8 +17,8 @@ spec:
           credentials:
             source: Secret
             secretRef:
-              namespace: crossplane-system
-              name: aws-creds
+              namespace: krateo-system
+              name: aws-creds-secret
               key: credentials
       patches:
         - fromFieldPath: "metadata.uid"

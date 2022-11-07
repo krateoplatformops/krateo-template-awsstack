@@ -65,6 +65,14 @@ spec:
                   type: object
                   description: Aws Stack deployment values
                   properties:
+                    namespace:
+                      type: string
+                    endpointName:
+                      type: string
+                    organizationName:
+                      type: string
+                    repositoryName:
+                      type: string
                     eks:
                       type: object
                       properties:
