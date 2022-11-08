@@ -27,12 +27,6 @@ spec:
       type: argocd
       icon: fa-solid fa-cookie
       endpointName: argocd
-    - name: documentation
-      values:
-        - "[<% organizationName %>][<% repositoryName %>]README.md"
-      type: doc
-      icon: fa-solid fa-book
-      endpointName: github
     - name: kubernetes
       value: deploymentId
       type: kubernetes
