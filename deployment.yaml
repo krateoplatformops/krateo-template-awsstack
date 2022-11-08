@@ -41,7 +41,7 @@ spec:
     organizationName: <% organizationName %>
     repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
     destinationApiUrl: <% destinationEndpoint.target %>
-    description: Cause baby, you're a firework. Come on, show 'em what you're worth
+    description: AWS Stack sample
     endpointName: <% destinationEndpoint.friendlyName %>
     namespace: <% namespace %>
     eks:
@@ -63,7 +63,7 @@ spec:
     fromRepo:
       schema: https
       organizationName: krateoplatformops
-      repositoryName: krateo-template-fireworksapp
+      repositoryName: krateo-template-awsstack
     toRepo:
       schema: https
       organizationName: <% organizationName %>
