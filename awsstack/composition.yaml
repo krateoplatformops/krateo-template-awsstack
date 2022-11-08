@@ -53,7 +53,7 @@ spec:
                 fmt: "%s-provider-aws-pc"
         - fromFieldPath: "spec.values.eks.clusterName"
           toFieldPath: "metadata.name"
-        - fromFieldPath: "spec.network.networkName"
+        - fromFieldPath: "spec.values.network.networkName"
           toFieldPath: "spec.forProvider.resourcesVpcConfig.subnetIdRefs[0].name"
           transforms:
             - type: string
@@ -207,7 +207,7 @@ spec:
                 fmt: "%s-rt"
         - fromFieldPath: "spec.values.network.networkName"
           toFieldPath: "spec.forProvider.vpcIdRef.name"
-        - fromFieldPath: "spec.network.networkName"
+        - fromFieldPath: "spec.values.network.networkName"
           toFieldPath: "spec.forProvider.routes[0].gatewayIdRef.name"
           transforms:
             - type: string
