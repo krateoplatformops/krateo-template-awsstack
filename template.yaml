@@ -24,10 +24,12 @@ spec:
           key: description
           description: Help others understand what this deployment does.
           required: true
+          default: AWS Stack sample
         - title: Namespace
           key: namespace
           description: Krateo namespace for the stack.
           required: true
+          default: krateo-system
     - title: Kubernetes
       box: Kubernetes cluster name and network name.
       boxStyle: info
