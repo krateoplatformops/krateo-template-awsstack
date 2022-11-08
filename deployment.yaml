@@ -39,7 +39,7 @@ spec:
       icon: fa-brands fa-docker
   values:
     organizationName: <% organizationName %>
-    repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
+    repositoryName: <% repositoryName %>
     destinationApiUrl: <% destinationEndpoint.target %>
     description: AWS Stack sample
     endpointName: <% destinationEndpoint.friendlyName %>
