@@ -118,7 +118,8 @@ spec:
       box: Set the destination repository.
       properties:
         - title: Endpoint
-          key: provider
+          key: destinationEndpoint
+          description: github.com / gitlab.com / bitbucket.org
           required: true
           type: endpoint
         - key: organizationName
